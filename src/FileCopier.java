@@ -1,4 +1,4 @@
-package com.meltyface.service;
+package interview.question;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -20,7 +20,7 @@ public class FileCopier {
 	public void readFile(String path) {		
 		String fileData = validate(path);
 		String timePoint = LocalDateTime.now().format(FORMATTER); 
-		String newFilePath = "./data/" + timePoint;
+		String newFilePath = "output_folder/" + timePoint;
 		writer.create(newFilePath, fileData);
 	}
 
